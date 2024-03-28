@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OMAKART | HEMANT SHARMA</title>
+<link rel="icon" href="logo.ico" type="image/x-icon">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    color: white;
+  }
+
+  .css1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .css2 {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    -webkit-box-shadow: 0 8px 15px -16px black;
+  }
+
+  .cssBall {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+  }
+</style>
+<meta http-equiv="refresh" content="3;url=https://omakart.mini.store/">
+</head>
+<body>
+  <div class="css1">
+    <div class="css2">
+      <img class="cssBall" src="logo.png" alt="">
+    </div>
+  </div>
+  <script>
+    function bounce() {
+      let ball = document.querySelector(".cssBall");
+      ball.style.transition = "0.5s";
+      ball.style.width = "55px";
+
+      ball.style.bottom = "-151px";
+      setTimeout(() => {
+        ball.style.bottom = "0px";
+        ball.style.transition = "0.7s";
+        ball.style.width = "50px";
+      }, 450);
+
+      // Redirect after 3 seconds
+      setTimeout(() => {
+        window.location.href = "https://omakart.mini.store/";
+      }, 3000);
+    }
+
+    setInterval(bounce, 1000);
+  </script>
+</body>
+</html>
